@@ -81,6 +81,10 @@ mat-list.mat-list.mat-list-base {
   #topPaginator{
     margin-top: 110px;
   }
+  #headerH1 #matIconBox {
+    top: 73px;
+    right: 10px;
+  }
 }
 @media screen and ( max-width: 480px ) {
   :host ::ng-deep.mat-paginator-page-size {

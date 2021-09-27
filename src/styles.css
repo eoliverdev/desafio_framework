@@ -2,6 +2,7 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 /* Logo Framework */
 #mainTitle {
   float: left;
@@ -10,6 +11,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   height: 60px;
   width: 166px;
 }
+
 /* Modal */
 .cdk-overlay-pane .mat-dialog-container{
   overflow: visible;

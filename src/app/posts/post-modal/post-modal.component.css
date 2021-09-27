@@ -58,6 +58,7 @@
   display: block;
   text-rendering: optimizeLegibility;
 }
+
 /* ScrollBar */
 :host ::ng-deep.mat-dialog-content ul {
   list-style: none;

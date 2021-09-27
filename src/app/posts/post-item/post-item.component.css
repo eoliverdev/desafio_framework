@@ -33,3 +33,10 @@
   color: #ffa500;
 }
 
+/* Responsivo */
+@media ( max-width: 960px){
+  .mat-card-content,
+  .mat-card-subtitle {
+    font-size: 16px;
+  }
+}

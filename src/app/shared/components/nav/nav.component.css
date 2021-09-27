@@ -6,7 +6,7 @@
 }
 .sidenav a{
   color: #ffffff;
-  font-size: 0.85rem;
+  font-size: 1rem;
   border-bottom: 1px dotted #7d4dd2;
 }
 .sidenav a:last-child{
@@ -33,4 +33,17 @@
 }
 .spacer {
   flex: 1 1 auto;
+}
+:host ::ng-deep.mat-paginator,
+:host ::ng-deep.mat-paginator-page-size
+:host ::ng-deep.mat-select-trigger {
+  font-size: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 960px){
+  .sidenav a {
+    color: #ffffff;
+    font-size: 1.2rem;
+  }
 }

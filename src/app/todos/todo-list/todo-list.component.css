@@ -19,7 +19,7 @@ mat-list.mat-list.mat-list-base {
   text-transform: capitalize;
 }
 :host ::ng-deep.mat-list-base .mat-list-item {
-  font-size: 14px;
+  font-size: 15px;
   text-rendering: optimizeLegibility;
 }
 :host ::ng-deep.mat-checkbox-checked .mat-checkbox-label {
@@ -40,14 +40,7 @@ mat-list.mat-list.mat-list-base {
   font-size: 1.7rem;
   text-rendering: optimizeLegibility;
 }
-@media screen and ( max-width: 584px ) {
-  #headerH1 {
-    top: 55px;
-  }
-  #headerH1 {
-    justify-content: center;
-  }
-}
+
 /*Paginator*/
 #topPaginator {
   margin-top: 120px;
@@ -55,22 +48,7 @@ mat-list.mat-list.mat-list-base {
 :host ::ng-deep.mat-paginator-range-label{
   margin: 0 10px 0 10px;
 }
-@media screen and ( max-width: 584px ) {
-  #topPaginator{
-    margin-top: 110px;
-  }
-}
-@media screen and ( max-width: 480px ) {
-  :host ::ng-deep.mat-paginator-page-size {
-    margin-right: 0;
-  }
-  :host ::ng-deep.mat-paginator-container {
-    justify-content: center;
-  }
-  :host ::ng-deep.mat-form-field-infix{
-    border-top: none;
-  }
-}
+
 /*Show Hide*/
 :host ::ng-deep#uncheckedItens .check {
   display: none;
@@ -90,4 +68,28 @@ mat-list.mat-list.mat-list-base {
 #headerH1 #matIconBox .mat-icon{
   float: right;
   margin-left: 7px;
+}
+
+/* Responsivo */
+@media screen and ( max-width: 584px ) {
+  #headerH1 {
+    top: 55px;
+  }
+  #headerH1 {
+    justify-content: center;
+  }
+  #topPaginator{
+    margin-top: 110px;
+  }
+}
+@media screen and ( max-width: 480px ) {
+  :host ::ng-deep.mat-paginator-page-size {
+    margin-right: 0;
+  }
+  :host ::ng-deep.mat-paginator-container {
+    justify-content: center;
+  }
+  :host ::ng-deep.mat-form-field-infix{
+    border-top: none;
+  }
 }

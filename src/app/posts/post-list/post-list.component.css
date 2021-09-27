@@ -45,6 +45,16 @@
   border-radius: 2px;
   text-rendering: optimizeLegibility;
 }
+
+/*Paginator*/
+#topPaginator {
+  margin-top: 120px;
+}
+:host ::ng-deep.mat-paginator-range-label{
+  margin: 0 10px 0 10px;
+}
+
+/* Responsivo */
 @media screen and ( max-width: 960px ) {
   #headerH1 .mat-icon{
     display: none;
@@ -56,15 +66,6 @@
     justify-content: center;
     text-rendering: optimizeLegibility;
   }
-}
-/*Paginator*/
-#topPaginator {
-  margin-top: 120px;
-}
-:host ::ng-deep.mat-paginator-range-label{
-  margin: 0 10px 0 10px;
-}
-@media screen and ( max-width: 584px ) {
   #topPaginator{
     margin-top: 110px;
   }

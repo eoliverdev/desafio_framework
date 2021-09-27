@@ -16,6 +16,7 @@ export class TodoListComponent implements OnInit, OnDestroy {
   todos: Todo[];
   pagedList: Todo[];
   subscription: Subscription;
+  pageEvent: PageEvent;
   //Show Hide To-Dos
   checkSelect: string = "allItens";
   // MatPaginator Inputs
@@ -48,6 +49,7 @@ export class TodoListComponent implements OnInit, OnDestroy {
     this.pagedList = this.todos.slice(startIndex, endIndex);
     this.pageSize = event.pageSize;
     this.pageIndex = event.pageIndex;
+    return event;
   }
   showCheck() {
     this.checkSelect = "checkedItens";

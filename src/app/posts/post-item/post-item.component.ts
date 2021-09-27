@@ -3,7 +3,7 @@ import { finalize } from "rxjs/operators";
 import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 
-import { Message, Post } from './../posts.model';
+import { Post, Message } from './../posts.model';
 import { PostsService } from './../posts.service';
 import { PostModalComponent } from '../post-modal/post-modal.component';
 
@@ -14,7 +14,7 @@ import { PostModalComponent } from '../post-modal/post-modal.component';
 })
 export class PostItemComponent {
 
-  @Input() post: Post[];
+  @Input() post: Post;
   subscription: Subscription;
   dlogSubscription: Subscription;
   messages: Message[];
@@ -30,7 +30,7 @@ export class PostItemComponent {
       const dialogRef = this.dialog.open(PostModalComponent, {
         width: '600px',
         height: '600px',
-        data: { msgs: this.messages }
+        data: { message: this.messages }
       });
       dialogRef.afterClosed().pipe(finalize(() => "")).subscribe(() => {
         this.subscription.unsubscribe();

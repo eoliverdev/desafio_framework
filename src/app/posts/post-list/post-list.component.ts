@@ -15,6 +15,7 @@ export class PostListComponent implements OnInit, OnDestroy {
   posts: Post[];
   pagedList: Post[];
   subscription: Subscription;
+  pageEvent: PageEvent;
   // Muda Grid
   breakpoint: string = 'grid-4';
   // MatPaginator Inputs
@@ -54,6 +55,7 @@ export class PostListComponent implements OnInit, OnDestroy {
     this.pagedList = this.posts.slice(startIndex, endIndex);
     this.pageSize = event.pageSize;
     this.pageIndex = event.pageIndex;
+    return event;
   }
 
   onResize(event: any) { // Ajusta Grid ao Tamanho de Tela

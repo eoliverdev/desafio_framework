@@ -34,7 +34,7 @@ export class AlbumItemComponent {
         height: '600px',
         panelClass: 'panelBox',
         autoFocus: true,
-        data: { phts: this.photos, nameAlbum: nameAlbum, columns: this.grid(window.innerWidth) }
+        data: { photos: this.photos, title: nameAlbum, columns: this.grid(window.innerWidth) }
       });
       dialogRef.afterClosed().pipe(finalize(() => "")).subscribe(() => {
         this.subscription.unsubscribe();

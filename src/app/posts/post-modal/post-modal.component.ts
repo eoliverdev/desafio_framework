@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import { Message } from './../posts.model';
+import { Modal } from './../posts.model';
 
 @Component({
   selector: 'app-post-modal',
@@ -12,7 +12,7 @@ export class PostModalComponent {
 
   constructor(
     public dialogRef: MatDialogRef<PostModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Message[]
+    @Inject(MAT_DIALOG_DATA) public data: Modal
   ) { }
 
   onNoClick(): void {

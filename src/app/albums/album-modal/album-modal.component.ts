@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
-import { Photo } from './../albums.model';
+import { Modal } from './../albums.model';
 
 @Component({
   selector: 'app-album-modal',
@@ -14,7 +14,7 @@ export class AlbumModalComponent {
 
   constructor(
     public dialogRef: MatDialogRef<AlbumModalComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: Photo[]
+    @Inject(MAT_DIALOG_DATA) public data: Modal
   ) { }
 
   onNoClick(): void {

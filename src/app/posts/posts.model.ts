@@ -10,3 +10,11 @@ export interface Message {
   title: string
   body: string
 }
+export interface Modal {
+  message: {
+    userId: number
+    id: number
+    title: string
+    body: string
+  }
+}

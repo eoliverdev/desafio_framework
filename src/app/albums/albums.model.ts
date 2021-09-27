@@ -10,3 +10,14 @@ export interface Photo {
   url: string
   thumbnailUrl: string
 }
+export interface Modal {
+  photos: {
+    albumId: number
+    id: number
+    title: string
+    url: string
+    thumbnailUrl: string
+  }
+  title: string
+  columns: number
+}

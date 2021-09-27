@@ -15,6 +15,7 @@ export class AlbumListComponent implements OnInit, OnDestroy {
   albums: Album[];
   pagedList: Album[];
   subscription: Subscription;
+  pageEvent: PageEvent;
   // Muda Grid
   breakpoint: string = 'grid-4';
   // MatPaginator Inputs
@@ -53,6 +54,7 @@ export class AlbumListComponent implements OnInit, OnDestroy {
     this.pagedList = this.albums.slice(startIndex, endIndex);
     this.pageSize = event.pageSize;
     this.pageIndex = event.pageIndex;
+    return event;
   }
 
   onResize(event: any) { // Ajusta Grid ao Tamanho de Tela

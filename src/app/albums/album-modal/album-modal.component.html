@@ -2,10 +2,10 @@
   <button mat-button (click)="closePhoto()">Voltar</button>
   <img src="{{onlyPhoto}}">
 </div>
-<h1 mat-dialog-title cdkTrapFocus *ngIf="!onlyPhoto">Album: <span class="nameAlbum">{{ data.nameAlbum}}</span></h1>
+<h1 mat-dialog-title cdkTrapFocus *ngIf="!onlyPhoto">Album: <span class="nameAlbum">{{ data.title}}</span></h1>
 <div mat-dialog-content class="contentAlbum" *ngIf="!onlyPhoto">
     <mat-grid-list cols="{{ data.columns }}" gutterSize="1px">
-      <mat-grid-tile *ngFor="let item of data.phts">
+      <mat-grid-tile *ngFor="let item of data.photos">
         <img class="dialogThumb" src="{{ item.thumbnailUrl }}" (click)="openPhoto(item.url)" />
       </mat-grid-tile>
     </mat-grid-list>

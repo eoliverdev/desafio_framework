@@ -33,6 +33,9 @@ import { PostModalComponent } from './post-modal/post-modal.component';
     MatDialogModule
   ],
   exports: [],
+  entryComponents: [
+    PostModalComponent
+  ],
   providers: [PostsService]
 })
 export class PostsModule { }

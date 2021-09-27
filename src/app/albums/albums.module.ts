@@ -31,6 +31,9 @@ import { AlbumModalComponent } from './album-modal/album-modal.component';
     MatDialogModule
   ],
   exports: [],
+  entryComponents: [
+    AlbumModalComponent
+  ],
   providers: [AlbumsService]
 })
 export class AlbumsModule { }

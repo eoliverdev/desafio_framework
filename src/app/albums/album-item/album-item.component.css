@@ -1,0 +1,85 @@
+/* Cards */
+.album-card {
+  display: inline-block;
+  height: calc(100% - 32px);
+  position: relative;
+  width: calc(100% - 32px);
+  min-height: 150px;
+  background: #ffffff;
+  cursor: pointer;
+  overflow: hidden;
+}
+.mat-card-title {
+  text-transform: uppercase;
+  font-size: 1rem;
+  margin: 0 0 10px 0;
+  color: #673ab7;
+  text-rendering: optimizeLegibility;
+}
+.mat-card-header {
+  width: calc(100% - 32px);
+  position: absolute;
+  text-align: right;
+  bottom: 16px;
+  z-index: 1;
+  display: block;
+}
+:host ::ng-deep.mat-card-header-text,
+:host ::ng-deep.mat-card-header .mat-card-title {
+  margin: 0;
+}
+.mat-card > .mat-card-actions:last-child{
+  margin: 0;
+}
+.mat-card-actions{
+  display: block;
+  width: calc(100% - 32px);
+  position: absolute;
+  height: calc(100% - 32px);
+  z-index: 0;
+  bottom: 16px;
+  margin: 0;
+  padding: 0;
+}
+.mat-card-actions button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top:0;
+  left: 0;
+}
+.mat-card-actions button .mat-icon {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 10rem;
+  color: #faf7ff;
+  margin: 0;
+  line-height: 1em;
+  top:0;
+  left: 0;
+  text-rendering: optimizeLegibility;
+}
+.album-card:hover{
+  background-color: #5c34a4;
+}
+
+.album-card:hover .mat-icon{
+  color:#6c3ebb !important;
+}
+
+.album-card:hover .mat-card-title {
+  color: #ffffff;
+  margin: 0 0 26px 0;
+  -webkit-transition: margin 500ms ease-out;
+  -moz-transition: margin 500ms ease-out;
+  -o-transition: margin 500ms ease-out;
+  transition: margin 500ms ease-out;
+}

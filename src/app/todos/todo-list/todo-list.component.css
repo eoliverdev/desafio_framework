@@ -1,0 +1,93 @@
+/*Content*/
+mat-list.mat-list.mat-list-base {
+  background-color: #ffffff;
+  margin: 16px;
+  padding: 20px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+:host ::ng-deep.mat-list-item {
+  border-bottom: 1px dotted #ccc;
+}
+:host ::ng-deepapp-todo-item.ng-star-inserted:last-child .mat-list-item {
+  border: none;
+}
+:host ::ng-deep.mat-checkbox-layout .mat-checkbox-label {
+  white-space: break-spaces;
+  line-height: 1rem;
+  text-transform: capitalize;
+}
+:host ::ng-deep.mat-list-base .mat-list-item {
+  font-size: 14px;
+  text-rendering: optimizeLegibility;
+}
+:host ::ng-deep.mat-checkbox-checked .mat-checkbox-label {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+/*Topbar*/
+#headerH1 {
+  position: fixed;
+  top: 60px;
+  z-index: 2;
+}
+.mat-drawer-opened #headerH1 {
+  width: calc(100% - 200px);
+}
+#headerH1 h1 {
+  font-size: 1.7rem;
+  text-rendering: optimizeLegibility;
+}
+@media screen and ( max-width: 584px ) {
+  #headerH1 {
+    top: 55px;
+  }
+  #headerH1 {
+    justify-content: center;
+  }
+}
+/*Paginator*/
+#topPaginator {
+  margin-top: 120px;
+}
+:host ::ng-deep.mat-paginator-range-label{
+  margin: 0 10px 0 10px;
+}
+@media screen and ( max-width: 584px ) {
+  #topPaginator{
+    margin-top: 110px;
+  }
+}
+@media screen and ( max-width: 480px ) {
+  :host ::ng-deep.mat-paginator-page-size {
+    margin-right: 0;
+  }
+  :host ::ng-deep.mat-paginator-container {
+    justify-content: center;
+  }
+  :host ::ng-deep.mat-form-field-infix{
+    border-top: none;
+  }
+}
+/*Show Hide*/
+:host ::ng-deep#uncheckedItens .check {
+  display: none;
+}
+:host ::ng-deep#checkedItens .uncheck {
+  display: none;
+}
+:host ::ng-deep.mat-icon {
+  width: 35px;
+}
+#headerH1 #matIconBox {
+  position: fixed;
+  top: 80px;
+  cursor: pointer;
+  right: 20px;
+}
+#headerH1 #matIconBox .mat-icon{
+  float: right;
+  margin-left: 7px;
+}

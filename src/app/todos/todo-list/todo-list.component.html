@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" id="headerH1">
+  <h1>To-Dos</h1>
+  <div id="matIconBox">
+    <mat-icon class="select_all" aria-hidden="false" aria-label="Exibir Todos os Itens" matTooltip="Todos os Itens" (click)="showAll()" *ngIf="checkSelect != 'allItens'">select_all</mat-icon>
+    <mat-icon class="check_box" aria-hidden="false" aria-label="Exibir Itens Concluídos" matTooltip="Concluídos" (click)="showCheck()" *ngIf="checkSelect == 'allItens' || checkSelect == 'uncheckedItens'">check_box</mat-icon>
+    <mat-icon class="check_box_outline" aria-hidden="false" aria-label="Exibir Itens não Concluídos" matTooltip="Não Concluídos" (click)="showUncheck()" *ngIf="checkSelect == 'allItens' || checkSelect == 'checkedItens'">check_box_outline_blank</mat-icon>
+  </div>
+</mat-toolbar>
+<mat-paginator id="topPaginator" [length]="length"
+            [pageSize]="pageSize"
+            [pageSizeOptions]="pageSizeOptions"
+            (page)="pageEvent = OnPageChange($event)"
+            [pageIndex]="pageIndex"
+            showFirstLastButtons="showFirstLastButtons">
+</mat-paginator>
+<mat-list role="list" class="mat-elevation-z1"
+  [id]="checkSelect">
+  <app-todo-item *ngFor="let todo of pagedList; trackBy: trackByFn" [todo]="todo"></app-todo-item>
+</mat-list>
+<mat-paginator [length]="length"
+              [pageSize]="pageSize"
+              [pageSizeOptions]="pageSizeOptions"
+              (page)="pageEvent = OnPageChange($event)"
+              [pageIndex]="pageIndex"
+              showFirstLastButtons="showFirstLastButtons">
+</mat-paginator>

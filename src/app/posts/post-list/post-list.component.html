@@ -1,0 +1,22 @@
+<mat-toolbar color="primary" id="headerH1">
+    <h1>Postagens</h1>
+    <mat-icon aria-hidden="false" aria-label="Exibir Itens como Blocos" matTooltip="Blocos" *ngIf="breakpoint == 'grid-1'" (click)="changeGrid()">view_module</mat-icon>
+    <mat-icon aria-hidden="false" aria-label="Exibir Itens como Lista" matTooltip="Lista" *ngIf="breakpoint != 'grid-1'" (click)="changeGrid()">list</mat-icon>
+</mat-toolbar>
+<mat-paginator id="topPaginator"  [length]="length"
+                                  [pageSize]="pageSize"
+                                  [pageSizeOptions]="pageSizeOptions"
+                                  (page)="pageEvent = OnPageChange($event)"
+                                  [pageIndex]="pageIndex"
+                                  showFirstLastButtons="showFirstLastButtons">
+</mat-paginator>
+<div class="container grid {{ breakpoint }}" (window:resize)="onResize($event)">
+  <app-post-item *ngFor="let post of pagedList; trackBy: trackByFn" [post]="post"></app-post-item>
+</div>
+<mat-paginator  [length]="length"
+                [pageSize]="pageSize"
+                [pageSizeOptions]="pageSizeOptions"
+                (page)="pageEvent = OnPageChange($event)"
+                [pageIndex]="pageIndex"
+                showFirstLastButtons="showFirstLastButtons">
+</mat-paginator>

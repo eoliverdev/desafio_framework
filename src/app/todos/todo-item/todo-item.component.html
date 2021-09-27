@@ -1,0 +1,7 @@
+<mat-list-item
+  [class.check]="todo.completed"
+  [class.uncheck]="!todo.completed">
+  <mat-checkbox [checked]="todo.completed"
+                (change)="this.completeChange.emit($event)"
+                [(ngModel)]="todo.completed" >{{ todo.title }}</mat-checkbox>
+</mat-list-item>

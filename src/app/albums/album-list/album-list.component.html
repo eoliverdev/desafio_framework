@@ -1,0 +1,19 @@
+<mat-toolbar color="primary" id="headerH1"><h1>Albuns</h1>
+</mat-toolbar>
+<mat-paginator id="topPaginator" [length]="length"
+                [pageSize]="pageSize"
+                [pageSizeOptions]="pageSizeOptions"
+                (page)="pageEvent = OnPageChange($event)"
+                [pageIndex]="pageIndex"
+                showFirstLastButtons>
+</mat-paginator>
+<div class="container grid {{ breakpoint }}" (window:resize)="onResize($event)">
+  <app-album-item *ngFor="let album of pagedList; trackBy: trackByFn" [album]="album"></app-album-item>
+</div>
+<mat-paginator [length]="length"
+                [pageSize]="pageSize"
+                [pageSizeOptions]="pageSizeOptions"
+                (page)="pageEvent = OnPageChange($event)"
+                [pageIndex]="pageIndex"
+                showFirstLastButtons>
+</mat-paginator>

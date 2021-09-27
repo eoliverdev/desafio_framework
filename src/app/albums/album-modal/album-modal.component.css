@@ -1,0 +1,102 @@
+.mat-dialog-container :host ::ng-deeph1 {
+  text-align: center;
+  color: #5c34a4;
+  font-weight: 500;
+  text-rendering: optimizeLegibility;
+}
+.nameAlbum {
+  font-size: 18px;
+  display: block;
+  color: #333;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+}
+.mat-grid-tile img {
+  cursor: pointer;
+}
+:host ::ng-deep.nameAlbum::first-letter{
+  text-transform: capitalize !important;
+}
+:host ::ng-deep.nameAlbum:first-letter{
+  text-transform: capitalize !important;
+}
+
+:host ::ng-deep.mat-dialog-title {
+  display: block;
+  text-align: center;
+  font-size: 26px;
+  height: 90px;
+  margin-bottom: 5px;
+  text-rendering: optimizeLegibility;
+}
+:host ::ng-deep.mat-dialog-actions button {
+  margin: auto;
+  padding: 9px 20px;
+  background-color: #5c34a4;
+  border: none;
+  color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+  text-rendering: optimizeLegibility;
+}
+:host ::ng-deep.mat-dialog-actions button:hover{
+  background-color: #ffa500;
+}
+/* ScrollBar */
+:host ::ng-deep.contentAlbum {
+  list-style: none;
+  padding: 0 10px 0 0;
+  margin: 0;
+  display: block;
+  height: 390px;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #5c34a4 transparent;
+  scrollbar-face-color: #5c34a4;
+  scrollbar-track-color: #ffffff;
+}
+::-webkit-scrollbar{
+  background-color: #ffffff;
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #5c34a4;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+/*showPhoto*/
+.showPhoto {
+  background: #ffffff;
+}
+.showPhoto img {
+  max-width: 95%;
+  height: auto;
+  display: block;
+  margin: auto;
+}
+.showPhoto button {
+  margin: auto;
+  display: block;
+  margin-top: -15px;
+  margin-bottom: 5px;
+  padding: 9px 20px;
+  background-color: #5c34a4;
+  border: none;
+  color: #fff;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+

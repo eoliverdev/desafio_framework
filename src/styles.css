@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Logo Framework */
+#mainTitle {
+  float: left;
+  background: url(assets/img/logo-frwk.svg) 0 center no-repeat;
+  color: transparent;
+  height: 60px;
+  width: 166px;
+}
+/* Modal */
+.cdk-overlay-pane .mat-dialog-container{
+  overflow: visible;
+}
+:host ::ng-deep.panelBox {
+  overflow: hidden !important;
+}

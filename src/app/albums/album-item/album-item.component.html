@@ -1,0 +1,8 @@
+<mat-card class="album-card"  (click)="openDialog(album.id, album.title)">
+  <mat-card-header class="headerCard">
+    <mat-card-title color="primary">{{album.title}}</mat-card-title>
+  </mat-card-header>
+  <mat-card-actions class="actionsCard">
+    <button mat-button><mat-icon aria-label="Ver Fotos">burst_mode</mat-icon></button>
+  </mat-card-actions>
+</mat-card>

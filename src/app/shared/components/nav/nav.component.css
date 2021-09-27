@@ -1,0 +1,36 @@
+.sidenav {
+  width: 200px;
+  background: #5c34a4;
+  padding: 0 15px;
+  border: none;
+}
+.sidenav a{
+  color: #ffffff;
+  font-size: 0.85rem;
+  border-bottom: 1px dotted #7d4dd2;
+}
+.sidenav a:last-child{
+  border: none;
+}
+.sidenav a .mat-icon{
+  margin-right: 5px;
+  color: #ffa500;
+}
+.sidenav .mat-toolbar {
+  background: inherit;
+  color: #ffffff;
+}
+#header{
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+.mat-nav-list .mat-list-item:hover {
+  background: rgba(0,0,0,.08);
+}
+.mat-nav-list .mat-list-item.active{
+  color: #ffa500;
+}
+.spacer {
+  flex: 1 1 auto;
+}

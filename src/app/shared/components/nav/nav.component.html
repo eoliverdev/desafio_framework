@@ -1,0 +1,32 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLinkActive="active" routerLink="postagens">
+        <mat-icon aria-hidden="false" aria-label="Posts">wysiwyg</mat-icon> Postagens
+      </a>
+      <a mat-list-item routerLinkActive="active" routerLink="albuns">
+        <mat-icon aria-hidden="false" aria-label="Albuns">photo</mat-icon> Albuns
+      </a>
+      <a mat-list-item routerLinkActive="active" routerLink="todos">
+        <mat-icon aria-hidden="false" aria-label="To-dos">check_box</mat-icon> To-Dos
+      </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content [class.sidenavOpen]="open" id="content">
+    <mat-toolbar color="primary" id="header" class="mat-elevation-z6">
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span id="mainTitle">Desafio Framework</span>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

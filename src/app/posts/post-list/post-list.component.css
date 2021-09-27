@@ -1,0 +1,86 @@
+/*Content*/
+.container {
+  display: grid;
+  margin: 16px;
+}
+.grid{
+  grid-row: 1fr;
+  grid-gap: 15px;
+}
+.grid-5{
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.grid-4{
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.grid-1{
+  grid-template-columns: 1fr;
+}
+
+/*Topbar*/
+#headerH1 {
+  position: fixed;
+  top: 60px;
+  z-index: 2;
+  justify-content: space-between;
+}
+#headerH1 h1 {
+  font-size: 1.7rem;
+  text-rendering: optimizeLegibility;
+}
+#headerH1 .mat-icon {
+  width: 35px;
+  height: 25px;
+  font-size: 31px;
+  color: #673ab7;
+  background-color: #fff;
+  text-align: center;
+  line-height: 25px;
+  position: fixed;
+  right: 20px;
+  top: 80px;
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  text-rendering: optimizeLegibility;
+}
+@media screen and ( max-width: 960px ) {
+  #headerH1 .mat-icon{
+    display: none;
+  }
+}
+@media screen and ( max-width: 584px ) {
+  #headerH1 {
+    top: 55px;
+    justify-content: center;
+    text-rendering: optimizeLegibility;
+  }
+}
+/*Paginator*/
+#topPaginator {
+  margin-top: 120px;
+}
+:host ::ng-deep.mat-paginator-range-label{
+  margin: 0 10px 0 10px;
+}
+@media screen and ( max-width: 584px ) {
+  #topPaginator{
+    margin-top: 110px;
+  }
+}
+@media screen and ( max-width: 480px ) {
+  :host ::ng-deep.mat-icon-button {
+    width: 35px;
+  }
+  :host ::ng-deep.mat-paginator-page-size {
+    margin-right: 0;
+  }
+  :host ::ng-deep.mat-paginator-container {
+    justify-content: center;
+  }
+  :host ::ng-deep.mat-form-field-infix{
+    border-top: none;
+  }
+}
+
